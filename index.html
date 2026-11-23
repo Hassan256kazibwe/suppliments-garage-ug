@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover premium health, fitness and wellness supplements at SupplementsGarageUG. Shop quality products with convenient WhatsApp ordering and nationwide delivery.">
+
+    <title>SupplementsGarageUG | Premium Supplements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- WEBSITE HEADER -->
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="SupplementsGarageUG Logo">
+            </div>
+
+            <nav>
+                <a href="#faq">FAQs</a>
+                <a href="#about">About Us</a>
+                <a href="#">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="cart.html">Cart 🛒</a>
+            </nav>
+
+            <a href="https://wa.me/256702765163" class="whatsapp-btn">
+                WhatsApp Us
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-tagline">
+                PREMIUM SUPPLEMENTS. PURE RESULTS.
+            </p>
+
+            <h1>
+                Your Wellness.<br>
+                Your Strength.<br>
+                Your Better You.
+            </h1>
+
+            <p class="hero-description">
+                Discover quality supplements for your health,
+                wellness, fitness and everyday nutritional needs.
+            </p>
+
+            <a href="#shop" class="shop-btn">
+                EXPLORE PRODUCTS
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="images/magnesium-products.jpeg"
+                 alt="Premium nutritional supplements">
+        </div>
+
+    </section>
+
+
+   
+<!-- CATEGORIES SECTION -->
+<section id="categories" class="categories">
+
+    <div class="section-heading">
+        <p>EXPLORE OUR COLLECTION</p>
+        <h2>Shop By Category</h2>
+    </div>
+
+    <div class="category-container">
+
+        <div class="category-card" onclick="filterProducts('Vitamins & Minerals'); document.getElementById('shop').scrollIntoView({behavior: 'smooth'});">
+            <h3>Vitamins & Minerals</h3>
+            <p>Explore essential nutritional supplements.</p>
+            <span>Explore Products →</span>
+        </div>
+
+        <div class="category-card" onclick="filterProducts('General Wellness'); document.getElementById('shop').scrollIntoView({behavior: 'smooth'});">
+            <h3>Fitness & Nutrition</h3>
+            <p>Products for your fitness journey.</p>
+            <span>Explore Products →</span>
+        </div>
+
+        <div class="category-card" onclick="filterProducts('General Wellness'); document.getElementById('shop').scrollIntoView({behavior: 'smooth'});">
+            <h3>Wellness</h3>
+            <p>Discover products for everyday wellness.</p>
+            <span>Explore Products →</span>
+        </div>
+
+        <div class="category-card" onclick="filterProducts(&quot;Women's Health &amp; Wellness&quot;); document.getElementById('shop').scrollIntoView({behavior: 'smooth'});">
+            <h3>Women's Health</h3>
+            <p>Explore our women's wellness collection.</p>
+            <span>Explore Products →</span>
+        </div>
+
+    </div>
+    <!-- ABOUT US SECTION -->
+<section class="about-us" id="about">
+
+    <h2>About SupplementsGarageUG</h2>
+
+    <p>
+        SupplementsGarageUG is dedicated to helping you support your
+        health, fitness and wellness journey with quality supplements.
+        We aim to provide convenient shopping, reliable customer service
+        and products to help you make informed wellness choices.
+    </p>
+
+</section>
+
+</section>
+<!-- FAQ SECTION -->
+<section class="faq" id="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+    <details>
+        <summary>Are your supplements genuine?</summary>
+        <p>We aim to provide quality products. Contact us to confirm product details and availability.</p>
+    </details>
+</div>
+    <div class="faq-item">
+    <details>
+        <summary>Do you deliver?</summary>
+        <p>...</p>
+    </details>
+</div>
+    <div class="faq-item">
+    <details>
+        <summary>How can I place an order?</summary>
+        <p>You can browse our products and contact us through WhatsApp to place an order.</p>
+    </details>
+</div>
+
+   <div class="faq-item">
+    <details>
+        <summary>Can I get advice on supplements?</summary>
+        <p>We can share general product information. For medical advice, please consult a qualified healthcare professional.</p>
+    </details>
+</div>
+
+</section>
+<!-- CUSTOMER TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+
+    <h2>What Our Customers Say</h2>
+    <p class="section-intro">Real experiences from our happy customers.</p>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <h3>Sarah M.</h3>
+            <p>"The quality of supplements is amazing. Delivery was fast and reliable!"</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <h3>David K.</h3>
+            <p>"Great customer service and genuine products. I will definitely order again."</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <h3>John T.</h3>
+            <p>"Supplements Garage UG made it easy to get the products I needed."</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- SHOP SECTION -->
+    <section id="shop" class="products">
+
+        <div class="section-heading">
+            <p>QUALITY YOU CAN EXPLORE</p>
+            <h2>Our Products</h2>
+        </div>
+
+        <!-- PRODUCT SEARCH -->
+        <div class="search-box">
+            <input type="text"
+                   id="productSearch"
+                   placeholder="Search supplements...">
+
+            <button type="button" onclick="searchProducts()">
+                🔍
+            </button>
+        </div>
+
+        <!-- PRODUCT CATEGORY FILTERS -->
+        <div class="category-filters">
+
+            <button type="button" onclick="filterProducts('All')">
+                All Products
+            </button>
+
+            <button type="button" onclick="filterProducts('Vitamins & Minerals')">
+                Vitamins & Minerals
+            </button>
+
+            <button type="button" onclick="filterProducts('General Wellness')">
+                General Wellness
+            </button>
+
+          <button type="button" onclick="filterProducts(&quot;Men's Health&quot;)">
+    Men's Health
+</button>
+
+<button type="button" onclick="filterProducts(&quot;Women's Health &amp; Wellness&quot;)">
+    Women's Health
+</button>
+            </button>
+
+            <button type="button" onclick="filterProducts('Hair & Skin Health')">
+                Hair & Skin Health
+            </button>
+
+            <button type="button" onclick="filterProducts('Digestive Health')">
+                Digestive Health
+            </button>
+
+            <button type="button" onclick="filterProducts('Weight Management')">
+                Weight Management
+            </button>
+
+        </div>
+
+        <!-- PRODUCT DISPLAY -->
+        <div class="product-container">
+
+            <!-- Products are loaded automatically from script.js -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <p>ABOUT SUPPLEMENTSGARAGEUG</p>
+
+            <h2>
+                Premium Supplements.<br>
+                Pure Results. Better You.
+            </h2>
+
+            <p>
+                We are committed to making quality supplements accessible
+                and convenient for our customers through a carefully
+                selected range of health, fitness and wellness products.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+
+        <h2>Ready to Order?</h2>
+
+        <p>
+            Discover your products and reach us directly on WhatsApp.
+        </p>
+
+        <a href="https://wa.me/256702765163" class="whatsapp-btn">
+            Chat With Us
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <img src="images/logo.jpeg" alt="SupplementsGarageUG Logo">
+
+            <h3>SupplementsGarageUG</h3>
+
+            <p>Premium Supplements. Pure Results. Better You.</p>
+
+            <p>📍 Makindye, Kampala, Uganda</p>
+
+            <p>📞 0702765163</p>
+
+            <p>🕒 Open Daily: 6 AM – 11 PM</p>
+
+            <a href="https://wa.me/256702765163" class="whatsapp-btn">
+                Contact Us on WhatsApp
+            </a>
+
+            <p class="copyright">
+                &copy; 2026 SupplementsGarageUG. All Rights Reserved.
+            </p>
+
+        </div>
+        <!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+
+    <h2>Contact SupplementsGarageUG</h2>
+    <p>Have questions or need help choosing a supplement? Reach out to us.</p>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>📞 Phone: +256 702765163</p>
+            <p>📧 Email: info@supplementsgarageug.com</p>
+            <p>📍 Location: Kampala, Uganda</p>
+        </div>
+
+        <div class="contact-form">
+    <form id="contactForm">
+
+        <input type="text" id="customerName" placeholder="Your Name" required>
+
+        <input type="email" id="customerEmail" placeholder="Your Email" required>
+
+        <textarea id="customerMessage" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</div>
+
+    </div>
+
+</section>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- NEWSLETTER SECTION -->
+<section class="newsletter">
+
+    <h2>Stay Updated!</h2>
+
+    <p>Subscribe for new products, health tips and special offers.</p>
+
+    <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+</section>
+<script>
+document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = this.querySelector("input").value;
+
+    alert("Thank you for subscribing: " + email);
+
+    this.reset();
+});
+</script>
+    <!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>SupplementsGarageUG</h2>
+            <p>Your trusted partner in health, fitness and wellness.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="blog.html">Blog</a>
+            <a href="#faq">FAQs</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        &copy; 2026 SupplementsGarageUG. All rights reserved.
+    </p>
+
+</footer>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value;
+    const email = document.getElementById("customerEmail").value;
+    const message = document.getElementById("customerMessage").value;
+
+    const phone = "256702765163";
+
+    const text = `Hello SupplementsGarageUG!
+Name: ${name}
+Email: ${email}
+Message: ${message}`;
+
+    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/256702765163"
+   class="whatsapp-float"
+   target="_blank">
+    WhatsApp Us
+</a>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑ Back to Top
+</button>
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

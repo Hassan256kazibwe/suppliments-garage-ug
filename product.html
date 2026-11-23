@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Supplements Garage UG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Supplements Garage UG</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-to-shop">
+    ← Back to Shop
+</a>
+
+        <section class="product-details-section">
+
+            <div class="product-details-container">
+
+                <div class="product-details-image">
+                    <img src="images/omega-3-mini-gels.jpeg"
+                         alt="Supplement product">
+                </div>
+
+                <div class="product-details-info">
+
+                    <p class="product-category">Vitamins & Minerals</p>
+
+                    <h2>Product Name</h2>
+
+                    <h3>Brand Name</h3>
+
+                    <p class="product-description">
+                        Discover product information, ingredients,
+                        usage instructions and other details about
+                        this supplement.
+                    </p>
+
+                    <p class="product-price">
+                        Price: Contact us
+                    </p>
+
+                    <button type="button" onclick="addToCart()">
+    Add to Cart
+</button>
+
+<button type="button" onclick="orderViaWhatsApp()">
+    Order via WhatsApp
+</button>
+                </div>
+
+            </div>
+
+            <div class="product-extra-info">
+
+    <h2>Product Information</h2>
+
+    <p id="product-details">
+        Product information will appear here.
+    </p>
+
+    <h3>Key Ingredients</h3>
+
+    <p id="product-ingredients">
+        Refer to the manufacturer's product label.
+    </p>
+
+    <h3>Product Benefits</h3>
+
+    <p id="product-benefits">
+        Refer to the manufacturer's product information.
+    </p>
+
+    <h3>Usage Information</h3>
+
+    <p id="product-usage">
+        Follow the directions provided on the manufacturer's label.
+    </p>
+
+    <h3>Precautions</h3>
+
+    <p id="product-precautions">
+        Read the product label and consult a qualified healthcare professional when necessary.
+    </p>
+
+</div>
+
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get("name");
+
+    const selectedProduct = products.find(product =>
+        product.name === productName
+    );
+
+    if (selectedProduct) {
+
+        document.querySelector(".product-details-info h2").textContent =
+            selectedProduct.name;
+
+        document.querySelector(".product-details-info h3").textContent =
+            selectedProduct.brand;
+
+        document.querySelector(".product-category").textContent =
+            selectedProduct.category;
+
+        document.querySelector(".product-description").textContent =
+            "Explore product information for " +
+            selectedProduct.name + " from " +
+            selectedProduct.brand + ".";
+            document.getElementById("product-details").textContent =
+    selectedProduct.name + " is supplied by " +
+    selectedProduct.brand + ".";
+
+document.getElementById("product-ingredients").textContent =
+    "Please check the manufacturer's label for the complete ingredient list.";
+
+document.getElementById("product-benefits").textContent =
+    "Refer to the manufacturer's product information for the intended use and benefits.";
+
+document.getElementById("product-usage").textContent =
+    "Follow the manufacturer's instructions on the product packaging.";
+
+document.getElementById("product-precautions").textContent =
+    "Read the label carefully and consult a qualified healthcare professional if you have questions.";
+
+        const productImage = document.querySelector(
+            ".product-details-image img"
+        );
+
+        if (selectedProduct.image) {
+            productImage.src = selectedProduct.image;
+            productImage.alt = selectedProduct.name;
+        } else {
+            productImage.style.display = "none";
+        }
+
+        document.title = selectedProduct.name +
+            " | Supplements Garage UG";
+    }
+    function addToCart() {
+
+    if (!selectedProduct) {
+        alert("Product not found!");
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+    const existingProduct = cart.find(item =>
+        item.name === selectedProduct.name
+    );
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            name: selectedProduct.name,
+            brand: selectedProduct.brand,
+            category: selectedProduct.category,
+            image: selectedProduct.image,
+            quantity: 1,
+            price: selectedProduct.price || 0
+        });
+    }
+
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+
+    alert(selectedProduct.name + " added to your cart!");
+}
+</script>
+
+</body>
+</html>
